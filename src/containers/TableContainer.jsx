@@ -1,18 +1,17 @@
 import React from 'react';
 
 const $ = require('jquery')
-$.DataTable = require('datatables.net')
 
 export class TableContainer extends React.Component {
-	componentDidMount() {
-		$(this.el).DataTable()
-	}
 
 	render() {
 		return (
 			<div>
 				<h2>{this.props.title}</h2>
-				<table className="display" width="100%" ref={el => this.el = el}>
+				<div className="pagination">
+					
+				</div>
+				<table className="display" width="90%" >
 					<thead>
 						<tr>
 							{this.props.header.map((head, idx) => {
