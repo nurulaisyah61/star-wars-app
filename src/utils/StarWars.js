@@ -1,8 +1,8 @@
-const baseUrl = "https://swapi.co/api";
+const baseUrl = "https://swapi.co/api/people/";
 const cors = "https://cors-anywhere.herokuapp.com/";
 export const StarWars = {
-  getAllPeople() {
-    return fetch(`${cors}${baseUrl}/people/`, {
+  getAllPeople(page) {
+    return fetch(`${cors}${baseUrl}?page=${page}`, {
 			method: 'GET',
 		})
 		.then(response => {
@@ -13,7 +13,7 @@ export const StarWars = {
 		})
 	},
 	getDetailPeople(idPeople) {
-		return fetch(`${cors}${baseUrl}/people/${idPeople}`, {
+		return fetch(`${cors}${baseUrl}${idPeople}`, {
 			method: 'GET',
 		})
 		.then(response => {

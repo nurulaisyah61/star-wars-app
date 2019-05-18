@@ -1,15 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import { ListPeople } from './star-wars/ListPeople';
+import { DetailPeople } from './star-wars/DetailPeople';
 
 function App() {
   return (
-    <Router>  
-      <Route path="/" exact component={ListPeople} />
-      {/* <Route path="/add-lab-result/:id" exact component={addLabResult} /> */}
-    </Router>
+    <div>
+      <Router>  
+        <Switch>
+          <Route path="/" exact component={ListPeople} />
+          <Route path="/detail/:id" exact component={DetailPeople} />
+        </Switch>
+      </Router>
+    </div>
+    
   );
 }
 
