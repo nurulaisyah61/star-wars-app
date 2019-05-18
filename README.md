@@ -1,3 +1,10 @@
+## Star-Wars-App
+
+### How to run
+1. clone this repository
+2. run `npm install` at the root of this directory
+3. run `npm start`
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
